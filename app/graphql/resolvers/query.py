@@ -13,4 +13,10 @@ class Query:
         user = get_user_by_email(db, email)
         if not user:
             raise Exception("User not found")
-        return UserType(id=user.id, email=user.email)
+        return UserType(
+            id=user.id,
+            email=user.email,
+            first_name=user.first_name,
+            last_name=user.last_name,
+            phone_number=user.phone_number
+        )
