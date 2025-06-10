@@ -11,3 +11,6 @@ services:
       - N8N_BASIC_AUTH_PASSWORD=adminpass
     volumes:
       - ~/.n8n:/home/node/.n8n
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
